@@ -21,15 +21,13 @@ function init() {
 
     runner = Matter.Runner.create();
 
-    game = new Game();
+    game = new Game(engine, world, runner, canvas.width, canvas.height, Matter);
 
     function gameLoop() {
         
         game.update();
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        game.draw();
+        game.draw(ctx);
     
         window.requestAnimationFrame(gameLoop);
     }
