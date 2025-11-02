@@ -1,0 +1,10 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars */
+    background-color: #000; /* Match your canvas background */
+}
+
+#game-canvas {
+    display: block; /* Removes any default bottom spacing */
+}
